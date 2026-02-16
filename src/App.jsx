@@ -3,6 +3,7 @@ import './App.css'
 
 function App() {
   const [activeSection, setActiveSection] = useState('acasa')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const smoothScrollTo = (element) => {
     const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - 80
@@ -125,12 +126,17 @@ function App() {
             <h1>Peisart Design</h1>
             <span className="tagline">Peisagistică & Grădini</span>
           </div>
-          <nav className="nav">
-            <a href="#acasa" onClick={(e) => handleNavClick(e, 'acasa')} className={activeSection === 'acasa' ? 'active' : ''}>Acasă</a>
-            <a href="#servicii" onClick={(e) => handleNavClick(e, 'servicii')} className={activeSection === 'servicii' ? 'active' : ''}>Servicii</a>
-            <a href="#portofoliu" onClick={(e) => handleNavClick(e, 'portofoliu')} className={activeSection === 'portofoliu' ? 'active' : ''}>Portofoliu</a>
-            <a href="#despre" onClick={(e) => handleNavClick(e, 'despre')} className={activeSection === 'despre' ? 'active' : ''}>Despre Noi</a>
-            <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className={activeSection === 'contact' ? 'active' : ''}>Contact</a>
+          <button className="mobile-menu-toggle" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav className={`nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+            <a href="#acasa" onClick={(e) => { handleNavClick(e, 'acasa'); setMobileMenuOpen(false); }} className={activeSection === 'acasa' ? 'active' : ''}>Acasă</a>
+            <a href="#servicii" onClick={(e) => { handleNavClick(e, 'servicii'); setMobileMenuOpen(false); }} className={activeSection === 'servicii' ? 'active' : ''}>Servicii</a>
+            <a href="#portofoliu" onClick={(e) => { handleNavClick(e, 'portofoliu'); setMobileMenuOpen(false); }} className={activeSection === 'portofoliu' ? 'active' : ''}>Portofoliu</a>
+            <a href="#despre" onClick={(e) => { handleNavClick(e, 'despre'); setMobileMenuOpen(false); }} className={activeSection === 'despre' ? 'active' : ''}>Despre Noi</a>
+            <a href="#contact" onClick={(e) => { handleNavClick(e, 'contact'); setMobileMenuOpen(false); }} className={activeSection === 'contact' ? 'active' : ''}>Contact</a>
           </nav>
         </div>
       </header>
@@ -190,9 +196,8 @@ function App() {
           <div className="despre-content">
             <div className="despre-text">
               <p>
-                <strong>Peisart Design</strong> este o companie de peisagistică dedicată creării de spații verzi unice și memorabile. 
-                Cu o echipă de profesioniști pasionați și experiență de peste 10 ani în domeniu, transformăm fiecare grădină 
-                într-o adevărată operă de artă.
+                <strong>Peisart Design</strong> este o companie tânără de peisagistică dedicată creării de spații verzi unice și memorabile. 
+                Cu o echipă dinamică și pasionată, transformăm fiecare grădină într-o adevărată operă de artă.
               </p>
               <p>
                 Ne mândrim cu atenția la detalii, calitatea materialelor folosite și dedicarea pentru fiecare proiect. 
@@ -200,16 +205,16 @@ function App() {
               </p>
               <div className="stats">
                 <div className="stat animate-on-scroll" style={{ animationDelay: '0s' }}>
-                  <h3>200+</h3>
-                  <p>Proiecte Finalizate</p>
+                  <h3>Pasiune</h3>
+                  <p>Energie & Entuziasm</p>
                 </div>
                 <div className="stat animate-on-scroll" style={{ animationDelay: '0.1s' }}>
-                  <h3>10+</h3>
-                  <p>Ani Experiență</p>
+                  <h3>100%</h3>
+                  <p>Dedicare</p>
                 </div>
                 <div className="stat animate-on-scroll" style={{ animationDelay: '0.2s' }}>
-                  <h3>100%</h3>
-                  <p>Clienți Mulțumiți</p>
+                  <h3>Premium</h3>
+                  <p>Calitate Materiale</p>
                 </div>
               </div>
             </div>
