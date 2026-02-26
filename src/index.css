@@ -17,12 +17,17 @@ body {
   min-width: 320px;
   min-height: 100vh;
   -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
   -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 * {

@@ -123,7 +123,7 @@ function App() {
       <header className="header">
         <div className="container">
           <div className="logo">
-            <h1>Peisart Design</h1>
+            <h1>🌿 Peisart Design</h1>
             <span className="tagline">Peisagistică & Grădini</span>
           </div>
           <button className="mobile-menu-toggle" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
@@ -144,7 +144,7 @@ function App() {
       {/* Hero Section */}
       <section className="hero" id="acasa">
         <div className="hero-content">
-          <h2>Creăm Grădini de Vis</h2>
+          <h2>Amenajare curți, grădini și spații verzi</h2>
           <p>Transformăm spațiile tale exterioare în oaze de frumusețe și relaxare</p>
           <div className="hero-features">
             <span>✓ Design Personalizat</span>
@@ -177,7 +177,12 @@ function App() {
         <div className="container">
           <h2>Portofoliul Nostru</h2>
           <p className="section-subtitle">Proiecte realizate cu pasiune și profesionalism</p>
-          <div className="portofoliu-grid">
+          <div className="coming-soon">
+            <div className="coming-soon-icon">🚧</div>
+            <h3>În Curând</h3>
+            <p>Lucrăm la galeria noastră de proiecte. Revino în curând pentru a vedea realizările noastre!</p>
+          </div>
+          {/* <div className="portofoliu-grid">
             {proiecte.map((proiect, index) => (
               <div key={index} className="proiect-card animate-on-scroll" style={{ animationDelay: `${index * 0.15}s` }}>
                 <div className="proiect-imagine">{proiect.imagine}</div>
@@ -185,7 +190,7 @@ function App() {
                 <p>{proiect.descriere}</p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -196,12 +201,12 @@ function App() {
           <div className="despre-content">
             <div className="despre-text">
               <p>
-                <strong>Peisart Design</strong> este o companie tânără de peisagistică dedicată creării de spații verzi unice și memorabile. 
+                <strong>Peisart Design</strong> este o companie tânără de peisagistică dedicată creării de spații verzi unice și memorabile, înființată în cadrul unui proiect cu finanțare europeană "Antreprenori în mediul rural". 
                 Cu o echipă dinamică și pasionată, transformăm fiecare grădină într-o adevărată operă de artă.
               </p>
               <p>
                 Ne mândrim cu atenția la detalii, calitatea materialelor folosite și dedicarea pentru fiecare proiect. 
-                De la conceptul inițial până la finalizare, suntem alături de clienții noștri la fiecare pas.
+                De la conceptul inițial până la finalizare, suntem alături de clienților noștri la fiecare pas.
               </p>
               <div className="stats">
                 <div className="stat animate-on-scroll" style={{ animationDelay: '0s' }}>
@@ -274,22 +279,13 @@ function App() {
         <div className="container">
           <div className="footer-content">
             <div className="footer-section">
-              <h3>Peisart Design</h3>
+              <h3>🌿 Peisart Design</h3>
               <p>Transformăm spațiile tale exterioare în oaze de frumusețe</p>
-            </div>
-            <div className="footer-section">
-              <h4>Link-uri Rapide</h4>
-              <a href="#servicii">Servicii</a>
-              <a href="#portofoliu">Portofoliu</a>
-              <a href="#despre">Despre Noi</a>
-              <a href="#contact">Contact</a>
             </div>
             <div className="footer-section">
               <h4>Social Media</h4>
               <div className="social-links">
                 <a href="#" aria-label="Facebook">Facebook</a>
-                <a href="#" aria-label="Instagram">Instagram</a>
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
               </div>
             </div>
           </div>
